@@ -132,11 +132,11 @@ export const RegisterModal = ({ isOpen, onClose }: RegisterModalProps) => {
     setTimeout(() => {
       const expire = "expires=Thu, 01 Jan 1970 00:00:00 GMT";
       document.cookie = `googtrans=; ${expire}; path=/;`;
-      document.cookie = `googtrans=; ${expire}; domain=.yourdesign.live; path=/;`;
+      document.cookie = `googtrans=; ${expire}; domain=.vercel.app; path=/;`;
 
       const cookieValue = `/auto/${name}`;
       document.cookie = `googtrans=${cookieValue}; path=/;`;
-      document.cookie = `googtrans=${cookieValue}; domain=.yourdesign.live; path=/;`;
+      document.cookie = `googtrans=${cookieValue}; domain=.vercel.app; path=/;`;
 
       setCookie(null, COOKIE_NAME, cookieValue, { path: "/" });
       setLoader(false);

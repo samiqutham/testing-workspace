@@ -1,6 +1,6 @@
 // base url
 // export const BASE_URL = "http://101.0.20.132:2083";
-export const BASE_URL = "https://stakefair.yourdesign.live";
+export const BASE_URL = "https://stakefair-hazel.vercel.app";
 export const BASE_URL2 = "https://eka247.com";
 export const BASE_URL_AUTH = "http://192.168.2.96:2923";
 // export const BASE_URL = "";

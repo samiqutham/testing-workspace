@@ -120,12 +120,12 @@ export const MDefaultBrowse = () => {
       const expire = "expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
       document.cookie = `googtrans=; ${expire}; path=/;`;
-      document.cookie = `googtrans=; ${expire}; domain=.yourdesign.live; path=/;`;
+      document.cookie = `googtrans=; ${expire}; domain=.vercel.app; path=/;`;
 
       // Set new googtrans cookie
       const cookieValue = `/auto/${name}`;
       document.cookie = `googtrans=${cookieValue}; path=/;`;
-      document.cookie = `googtrans=${cookieValue}; domain=.yourdesign.live; path=/;`;
+      document.cookie = `googtrans=${cookieValue}; domain=.vercel.app; path=/;`;
 
       // Also store in your app’s cookie (if you want)
       setCookie(null, COOKIE_NAME, cookieValue, { path: "/" });

@@ -53,7 +53,7 @@ const MFooter = () => {
       ],
     },
     ...(hostPort !== "3003" &&
-      !origin.includes("stakefair-exchange.yourdesign.live")
+      !origin.includes("stakefair-exchange.vercel.app")
       ? [
         {
           label: "Casino",
@@ -100,7 +100,7 @@ const MFooter = () => {
       ]
       : []),
     ...(hostPort === "3003" ||
-      origin.includes("stakefair-exchange.yourdesign.live")
+      origin.includes("stakefair-exchange.vercel.app")
       ? [
         {
           label: "Safer Gambling",
@@ -136,7 +136,7 @@ const MFooter = () => {
         { name: "AML Policy", routerLink: "/about/aml-policy" },
         { name: "Terms of Service", routerLink: "/about/terms" },
         ...(hostPort === "3003" ||
-          origin.includes("stakefair-exchange.yourdesign.live")
+          origin.includes("stakefair-exchange.vercel.app")
           ? [
             { name: "18+", routerLink: "#" },
             { name: "Developers", routerLink: "#" },
@@ -236,12 +236,12 @@ const handleSelectLanguage = (lang: any, name: any) => {
   const expire = "expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
   document.cookie = `googtrans=; ${expire}; path=/;`;
-  document.cookie = `googtrans=; ${expire}; domain=.yourdesign.live; path=/;`;
+  document.cookie = `googtrans=; ${expire}; domain=.vercel.app; path=/;`;
 
   // Set new googtrans cookie
   const cookieValue = `/auto/${name}`;
   document.cookie = `googtrans=${cookieValue}; path=/;`;
-  document.cookie = `googtrans=${cookieValue}; domain=.yourdesign.live; path=/;`;
+  document.cookie = `googtrans=${cookieValue}; domain=.vercel.app; path=/;`;
 
   // Also store in your app’s cookie (if you want)
   setCookie(null, COOKIE_NAME, cookieValue, { path: "/" });
@@ -311,7 +311,7 @@ const handleSelectLanguage = (lang: any, name: any) => {
         <div className="w-full max-w-[1200px]">
           <div className="footer-content w-full m-auto grid ">
             {(hostPort === "3003" ||
-              origin.includes("stakefair-exchange.yourdesign.live")) && (
+              origin.includes("stakefair-exchange.vercel.app")) && (
                 <div className="bg-[#213743] py-[10px] mb-3 gap-[10px] flex items-center justify-center font-bold text-[12px]">
                   <div className="inline-block w-[36px] aspect-square bg-gradient-to-b from-[#e1e1e1] to-[silver] text-[#1e1e1e] rounded-[2px] py-[10px] px-[17px] h-[36px] bg-[position:-89px_-490px] bg-[url('@workspace/ui/assets/sprite/exchange_sprites.svg')] bg-no-repeat bg-[length:1280px_1024px]"></div>
                   <p className="text-[#c4c4c4] m-0 leading-normal">

@@ -205,7 +205,7 @@ export default function MChat({
           : isMobile ||
               (exchangeTab &&
                 (hostPort === "3003" ||
-                  origin === "stakefair-exchange.yourdesign.live"))
+                  origin === "stakefair-exchange.vercel.app"))
             ? "w-full"
             : isTablet
               ? "w-[320px]"
@@ -379,7 +379,7 @@ export default function MChat({
             : isMobile ||
                 (exchangeTab &&
                   (hostPort === "3003" ||
-                    origin === "stakefair-exchange.yourdesign.live"))
+                    origin === "stakefair-exchange.vercel.app"))
               ? "left-0 bottom-[4px]"
               : isTablet
                 ? "w-[320] bottom-0"

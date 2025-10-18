@@ -99,24 +99,24 @@ const MBrowse = () => {
     // 🎯 Casino env
     if (
       port === "3002" ||
-      origin.includes("stakefair-casino.yourdesign.live")
+      origin.includes("stakefair-casino.vercel.app")
     ) {
       setActiveKey("casino");
     }
     else if (
       port === "3003" ||
-      origin.includes("stakefair-exchange.yourdesign.live")
+      origin.includes("stakefair-exchange.vercel.app")
     ) {
       setActiveKey("exchange");
     }
     // 🎯 Sports env
     else if (
       port === "3005" ||
-      origin.includes("stakefair-sportsbook.yourdesign.live")
+      origin.includes("stakefair-sportsbook.vercel.app")
     ) {
       setActiveKey("sports");
     }
-    // 🎯 Default env (3001 or stakefair.yourdesign.live)
+    // 🎯 Default env (3001 or stakefair-hazel.vercel.app)
     else {
       setActiveKey(null);
     }

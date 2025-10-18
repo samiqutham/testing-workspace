@@ -184,25 +184,25 @@ const DSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
 
     if (
       port === "3005" ||
-      origin.includes("stakefair-sports.yourdesign.live")
+      origin.includes("stakefair-sports.vercel.app")
     ) {
       baseNav = sportsNavData;
       activeButton = "Sports";
     } else if (
       port === "3002" ||
-      origin.includes("stakefair-casino.yourdesign.live")
+      origin.includes("stakefair-casino.vercel.app")
     ) {
       baseNav = casinoNavData;
       activeButton = "Casino";
     } else if (
       port === "3003" ||
-      origin.includes("stakefair-exchange.yourdesign.live")
+      origin.includes("stakefair-exchange.vercel.app")
     ) {
       baseNav = exchangeNavData;
       activeButton = "Exchange";
     } else if (
       port === "3004" ||
-      origin.includes("stakefair-fantasy.yourdesign.live")
+      origin.includes("stakefair-fantasy.vercel.app")
     ) {
       baseNav = defaultNavData;
       activeButton = "Fantasy";
@@ -251,7 +251,7 @@ const DSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
     const { port, origin } = window.location;
 
     // 🎯 Casino env
-    if (port === "3001" || origin.includes("stakefair.yourdesign.live")) {
+    if (port === "3001" || origin.includes("stakefair-hazel.vercel.app")) {
       setIsBase(true);
     } else setIsBase(false);
   }, []);
@@ -277,7 +277,7 @@ const DSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
         className={cn(
           "scroll-width-none !gap-0",
           (hostPort === "3003" ||
-            origin.includes("stakefair-exchange.yourdesign.live")) &&
+            origin.includes("stakefair-exchange.vercel.app")) &&
             (openTab || open)
             ? "overflow-hidden"
             : "overflow-auto"
@@ -375,7 +375,7 @@ const DSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
             className={cn(
               "scroll-width-none !gap-0",
               (hostPort === "3003" ||
-                origin.includes("stakefair-exchange.yourdesign.live")) &&
+                origin.includes("stakefair-exchange.vercel.app")) &&
                 (openTab || open)
                 ? "overflow-hidden"
                 : "overflow-auto"
@@ -526,7 +526,7 @@ const DSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
               }}
               className={cn(
                 (hostPort === "3003" ||
-                  origin.includes("stakefair-exchange.yourdesign.live")) &&
+                  origin.includes("stakefair-exchange.vercel.app")) &&
                   (open || openTab) &&
                   "overflow-y-auto scroll-width-none"
               )}
@@ -544,7 +544,7 @@ const DSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
             >
               {activeData &&
                 (hostPort === "3003" ||
-                origin.includes("stakefair-exchange.yourdesign.live") ? (
+                origin.includes("stakefair-exchange.vercel.app") ? (
                   <>
                     <ExchangeOpenNavMain
                       items={activeData.navMain.filter(

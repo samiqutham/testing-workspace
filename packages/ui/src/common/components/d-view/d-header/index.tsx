@@ -194,7 +194,7 @@ const DHeader = () => {
     const { port, origin } = window.location;
 
     // 🎯 Casino env
-    if (port === "3001" || origin.includes("stakefair.yourdesign.live")) {
+    if (port === "3001" || origin.includes("stakefair.vercel.app")) {
       setIsBase(true);
     } else setIsBase(false);
   }, []);

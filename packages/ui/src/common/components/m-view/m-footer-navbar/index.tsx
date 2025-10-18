@@ -39,53 +39,53 @@ const MFooterNavbar = () => {
     // {
     //   id: "sports",
     //   label:
-    //     port === "3001" || origin.includes("stakefair.yourdesign.live")
+    //     port === "3001" || origin.includes("stakefair.vercel.app")
     //       ? "Exchange"
-    //       : port === "3003" || origin.includes("stakefair-exchange.yourdesign.live")
+    //       : port === "3003" || origin.includes("stakefair-exchange.vercel.app")
     //       ? "Fantacy"
     //       : "Sports",
     //   link:
-    //     port === "3001" || origin.includes("stakefair.yourdesign.live")
-    //       ? "https://stakefair-exchange.yourdesign.live"
-    //       : port === "3003" || origin.includes("stakefair-exchange.yourdesign.live")
-    //       ? "https://stakefair-fantasy.yourdesign.live"
+    //     port === "3001" || origin.includes("stakefair.vercel.app")
+    //       ? "https://stakefair-exchange.vercel.app"
+    //       : port === "3003" || origin.includes("stakefair-exchange.vercel.app")
+    //       ? "https://stakefair-fantasy.vercel.app"
     //       : sportsbook_sLiveUrl,
     //   icon: "basketball",
     // },
     // {
     //   id:
-    //     port === "3005" || origin.includes("stakefair-sportsbook.yourdesign.live")
+    //     port === "3005" || origin.includes("stakefair-sportsbook.vercel.app")
     //       ? "sports"
     //       : "exchange",
     //   label:
-    //     port === "3005" || origin.includes("stakefair-sportsbook.yourdesign.live")
+    //     port === "3005" || origin.includes("stakefair-sportsbook.vercel.app")
     //       ? "Sports"
     //       : "Exchange",
     //   link:
-    //     port === "3005" || origin.includes("stakefair-sportsbook.yourdesign.live")
-    //       ? "https://stakefair-sportsbook.yourdesign.live"
-    //       : "https://stakefair-exchange.yourdesign.live",
+    //     port === "3005" || origin.includes("stakefair-sportsbook.vercel.app")
+    //       ? "https://stakefair-sportsbook.vercel.app"
+    //       : "https://stakefair-exchange.vercel.app",
     //   icon: "basketball",
     // },
     {
       id:
-        port === "3004" || origin.includes("stakefair-fantasy.yourdesign.live")
+        port === "3004" || origin.includes("stakefair-fantasy")
           ? "fantasy"
-          : port === "3005" || origin.includes("stakefair-sportsbook.yourdesign.live")
+          : port === "3005" || origin.includes("stakefair-sportsbook.vercel.app")
           ? "sports"
           : "exchange",
       label:
-        port === "3004" || origin.includes("stakefair-fantasy.yourdesign.live")
+        port === "3004" || origin.includes("stakefair-fantasy.vercel.app")
           ? "Fantasy"
-          : port === "3005" || origin.includes("stakefair-sportsbook.yourdesign.live")
+          : port === "3005" || origin.includes("stakefair-sportsbook.vercel.app")
           ? "Sports"
           : "Exchange",
       link:
-        port === "3004" || origin.includes("stakefair-fantasy.yourdesign.live")
+        port === "3004" || origin.includes("stakefair-fantasy.vercel.app")
           ? fantasy_sLiveUrl
-          : port === "3005" || origin.includes("stakefair-sportsbook.yourdesign.live")
-          ? "https://stakefair-sportsbook.yourdesign.live"
-          : "https://stakefair-exchange.yourdesign.live",
+          : port === "3005" || origin.includes("stakefair-sportsbook.vercel.app")
+          ? sportsbook_sLiveUrl
+          : exchange_sLiveUrl,
       icon: "basketball",
     },
     {
@@ -101,22 +101,22 @@ const MFooterNavbar = () => {
 
     if (
       port === "3002" ||
-      origin.includes("stakefair-casino.yourdesign.live")
+      origin.includes("stakefair-casino.vercel.app")
     ) {
       openDrawer("casino");
     }else if (
       port === "3003" ||
-      origin.includes("stakefair-exchange.yourdesign.live")
+      origin.includes("stakefair-exchange.vercel.app")
     ) {
       openDrawer("exchange");
     } else if (
       port === "3004" ||
-      origin.includes("stakefair-fantasy.yourdesign.live")
+      origin.includes("stakefair-fantasy.vercel.app")
     ) {
       openDrawer("fantasy");
     }else if (
       port === "3005" ||
-      origin.includes("stakefair-sportsbook.yourdesign.live")
+      origin.includes("stakefair-sportsbook.vercel.app")
     ) {
       openDrawer("sports");
     }
@@ -215,7 +215,7 @@ const MFooterNavbar = () => {
                 activeDrawer ? "translate-y-0" : "translate-y-full"
               }`,
               (port === "3003" ||
-                origin.includes("stakefair-exchange.yourdesign.live")) &&
+                origin.includes("stakefair-exchange.vercel.app")) &&
                 exchangeTab
                 ? "left-[50px]"
                 : "left-0"

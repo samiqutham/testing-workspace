@@ -34,11 +34,11 @@ export function getBrowseComponent() {
     case hostname === "localhost" && port === "3005":
       return MSportsBrowse;
 
-    case origin.includes("stakefair.yourdesign.live"):
+    case origin.includes("stakefair-hazel.vercel.app"):
       return MDefaultBrowse;
-    case origin.includes("stakefair-casino.yourdesign.live"):
+    case origin.includes("stakefair-casino.vercel.app"):
       return MCasinoBrowse;
-    case origin.includes("stakefair-sportsbook.yourdesign.live"):
+    case origin.includes("stakefair-sportsbook.vercel.app"):
       return MSportsBrowse;
 
     default:

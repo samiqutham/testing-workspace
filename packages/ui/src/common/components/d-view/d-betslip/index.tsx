@@ -88,7 +88,7 @@ export default function DBetslip({
         isMobile ||
           (exchangeTab &&
             (hostPort === "3003" ||
-              origin === "stakefair-exchange.yourdesign.live"))
+              origin === "stakefair-exchange.vercel.app"))
           ? "w-full"
           : isTablet
             ? "w-[320px]"

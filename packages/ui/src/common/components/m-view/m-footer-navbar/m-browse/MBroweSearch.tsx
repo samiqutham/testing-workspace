@@ -57,10 +57,10 @@ const MBroweSearch = ({ className }: { className?: string }) => {
       };
       //  Live domain mapping
       const domainMap: Record<string, string> = {
-        "stakefair-casino.yourdesign.live": "Casino",
-        "stakefair-exchange.yourdesign.live": "Exchange",
-        "stakefair-fantasy.yourdesign.live": "Fantasy",
-        "stakefair-sportsbook.yourdesign.live": "Sports",
+        "stakefair-casino.vercel.app": "Casino",
+        "stakefair-exchange.vercel.app": "Exchange",
+        "stakefair-fantasy.vercel.app": "Fantasy",
+        "stakefair-sportsbook.vercel.app": "Sports",
       };
 
       if (port && portMap[port]) {
