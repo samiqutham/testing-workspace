@@ -6,12 +6,12 @@ export const BASE_URL_AUTH = "http://192.168.2.96:2923";
 // export const BASE_URL = "";
 
 // all domains
-export const stakefairLiveUrl = "https://stakefair.yourdesign.live";
-export const casino_sLiveUrl = "https://stakefair-casino.yourdesign.live";
-export const exchange_sLiveUrl = "https://stakefair-exchange.yourdesign.live";
-export const fantasy_sLiveUrl = "https://stakefair-fantasy.yourdesign.live";
+export const stakefairLiveUrl = "https://stakefair-hazel.vercel.app";
+export const casino_sLiveUrl = "https://stakefair-casino.vercel.app";
+export const exchange_sLiveUrl = "https://stakefair-exchange.vercel.app";
+export const fantasy_sLiveUrl = "https://stakefair-fantasy.vercel.app";
 export const sportsbook_sLiveUrl =
-  "https://stakefair-sportsbook.yourdesign.live";
+  "https://stakefair-sportsbook.vercel.app";
 
 export const CONFIG = {
   siteKey: "2",
