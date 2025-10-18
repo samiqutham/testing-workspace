@@ -1,25 +1,21 @@
 // styles
 import "@workspace/ui/styles/globals.css";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
-
 // imports
 import type React from "react";
-import { ReactNode, Suspense } from "react";
-import { Metadata } from "next";
-import Script from "next/script";
+import ResponsiveLayout from "./responsive-layout";
+export const dynamic = "force-dynamic";
+import { ReactNode } from "react";
 
+import Script from "next/script";
+import { Metadata } from "next";
 // third party
 import { SidebarProvider } from "@workspace/ui/components/sidebar";
-import { ToastProvider } from "@workspace/ui/common/toast/toast-context";
-import { ToastContainer } from "@workspace/ui/common/toast/index";
-import { Toaster } from "react-hot-toast";
 import CookieModal from "@workspace/ui/common/modal/cookies-modal/CookiesModal";
 
-// local
-import ResponsiveLayout from "./responsive-layout";
-import Loading from "./loading";
-
-export const dynamic = "force-dynamic";
+import { ToastProvider } from "@workspace/ui/common/toast/toast-context";
+import { ToastContainer } from "@workspace/ui/common/toast/index";
 
 export const metadata: Metadata = {
   title: "Casino Project",
@@ -36,15 +32,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
         />
         <meta name="theme-color" content="#1a2c38" />
+        {/* <!-- Windows Phone --> */}
         <meta name="msapplication-navbutton-color" content="#1a2c38" />
+        {/* <!-- iOS Safari --> */}
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
-        />
+        ></meta>
       </head>
-
-      <body className="relative !top-0" cz-shortcut-listen="true">
-        {/* 🧩 Load external scripts */}
+      <body cz-shortcut-listen="true" className="relative !top-0">
         <Script src="/language/translateicon.js" strategy="afterInteractive" />
         <Script src="/language/lang-config.js" strategy="beforeInteractive" />
         <Script src="/language/translation.js" strategy="beforeInteractive" />
@@ -52,19 +48,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           src="//translate.google.com/translate_a/element.js?cb=TranslateInit"
           strategy="afterInteractive"
         />
-
-        {/* 🧩 Wrap app with providers */}
         <ToastProvider>
           <SidebarProvider>
-            {/* ✅ Suspense added here */}
-            <Suspense fallback={<Loading/>}>
-              <ResponsiveLayout>{children}</ResponsiveLayout>
-              <CookieModal />
-              <ToastContainer />
-            </Suspense>
-
-            {/* React Hot Toast works outside Suspense */}
+            <ResponsiveLayout>{children}</ResponsiveLayout>
+            <CookieModal />
             <Toaster position="top-left" />
+            <ToastContainer />
           </SidebarProvider>
         </ToastProvider>
       </body>

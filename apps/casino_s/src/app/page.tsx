@@ -10,6 +10,7 @@ import BetBoards from "../components/common/bet-board";
 import { useSidebar } from "@workspace/ui/components/sidebar";
 import { cn } from "@workspace/ui/lib/utils";
 import { useAppStore } from "@workspace/ui/store/store";
+import Loading from "./loading";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -83,6 +84,24 @@ export default function Home() {
   };
 
   const { open, isTablet } = useSidebar();
+
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const runPromise = async () => {
+      // Fake async work (2 sec)
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // Jab promise resolve ho jaye
+      setReady(true);
+    };
+
+    runPromise();
+  }, []);
+
+  if (!ready) {
+    return <Loading />;
+  }
 
   return (
     <div>
