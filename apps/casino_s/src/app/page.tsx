@@ -99,9 +99,9 @@ export default function Home() {
     runPromise();
   }, []);
 
-  // if (!ready) {
-  //   return <Loading />;
-  // }
+  if (!ready) {
+    return <Loading />;
+  }
 
   return (
     <div>
