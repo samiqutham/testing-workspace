@@ -1,0 +1,46 @@
+
+.gridLayout {
+  --areas: 
+    'misc misc misc misc marketCount marketCount'
+    'fixture fixture fixture fixture fixture fixture'
+    'marketName0 marketName0 marketName0 marketName0 marketName0 marketName0'
+    'outcomes0 outcomes0 outcomes0 outcomes0 outcomes0 outcomes0'
+    'outcomes0 outcomes0 outcomes0 outcomes0 outcomes0 outcomes0';
+  --column-count: 6;
+}
+
+ .marketName{
+    position: relative;
+    left: 289px;
+  }
+
+  .card{
+    width: 211.64px;
+  }
+
+@media (min-width: 780px) {
+  .gridLayout {
+    --areas: 
+      'misc misc misc misc misc line marketName0 marketName0 marketName0 marketName0 line2 line2'
+      'teams teams teams fixtureScore fixtureScore outcomes0 outcomes0 outcomes0 outcomes0 outcomes0 outcomes0 marketCount'
+      'teams teams teams fixtureScore fixtureScore outcomes0 outcomes0 outcomes0 outcomes0 outcomes0 outcomes0 marketCount';
+    --column-count: 12;
+  }
+
+  .marketName{
+    left: 0px;
+  }
+  .card{
+    width: auto;
+  }
+}
+
+@media (min-width:1285px)  {
+    .marketName{
+        margin-left: 160px;
+    }
+    .card{
+    width: auto;
+      height: 58px;
+  }
+}

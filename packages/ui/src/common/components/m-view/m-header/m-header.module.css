@@ -1,0 +1,59 @@
+.button {
+  background: red !important;
+}
+.headerShadow {
+  box-shadow: #0003 0 4px 6px -1px, #0000001f 0 2px 4px -1px;
+}
+
+.arrowDrop:before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 51.7px;
+  left: 124px;
+  background: inherit;
+  background: #fff;
+  visibility: hidden;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.open::before {
+  visibility: visible; 
+}
+
+
+
+
+
+/* Scope everything inside dropdownWrapper */
+.dropdownWrapper [data-slot="command-input-wrapper"] {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  border: 0;
+}
+
+/* Search icon inside the input wrapper */
+.dropdownWrapper [data-slot="command-input-wrapper"] svg {
+  position: absolute;
+  left: 19px;
+}
+
+/* Command list (results) */
+.dropdownWrapper [data-slot="command-list"] {
+  margin-top: 10px;
+}
+
+/* Command items */
+.dropdownWrapper [data-slot="command-item"] {
+  padding-block: 0.5px;
+  padding-inline: 0px;
+  background:unset;
+}
+.customInput::placeholder {
+  font-weight: 300;
+  /* font-family: 'proxima-nova', sans-serif; */
+  color: #566671; /* optional */
+
+}

@@ -1,0 +1,48 @@
+{
+  "name": "shadcn-ui-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "//": "start________Stakefair Scripts________###############start --port 3001",
+    "dev:stakefair": "turbo run dev --filter=stakefair",
+    "start:stakefair": "turbo run start --filter=stakefair",
+    "build:stakefair": "turbo run build --filter=stakefair",
+    "//": "start________Stakefair Casino________################start --port 3002",
+    "dev:casino_s": "turbo run dev --filter=casino_s",
+    "start:casino_s": "turbo run start --filter=casino_s",
+    "build:casino_s": "turbo run build --filter=casino_s",
+    "//": "start________Stakefair Exchange________##############start --port 3003",
+    "dev:exchange_s": "turbo run dev --filter=exchange_s",
+    "start:exchange_s": "turbo run start --filter=exchange_s",
+    "build:exchange_s": "turbo run build --filter=exchange_s",
+    "//": "start________Stakefair Fantasy________###############start --port 3004",
+    "dev:fantasy_s": "turbo run dev --filter=fantasy_s",
+    "start:fantasy_s": "turbo run start --filter=fantasy_s",
+    "build:fantasy_s": "turbo run build --filter=fantasy_s",
+    "//": "start________Stakefair Sportsbook________############start --port 3005",
+    "dev:sportsbook_s": "turbo run dev --filter=sportsbook_s",
+    "start:sportsbook_s": "turbo run start --filter=sportsbook_s",
+    "build:sportsbook_s": "turbo run build --filter=sportsbook_s",
+    "//": "start________Run on All Same Time________############start --port 3001 to 3005",
+    "dev:parallel": "turbo run dev --parallel --filter=stakefair --filter=casino_s --filter=exchange_s --filter=fantasy_s --filter=sportsbook_s",
+    "start:parallel": "turbo run start --parallel --filter=stakefair --filter=casino_s --filter=exchange_s --filter=fantasy_s --filter=sportsbook_s",
+    "build:parallel": "turbo run build --parallel --filter=stakefair --filter=casino_s --filter=exchange_s --filter=fantasy_s --filter=sportsbook_s",
+    "//": "start________Install All Project Dependencies________############start",
+    "install:projects": "pnpm install --force -r --filter './apps/**'",
+    "install:ui": "pnpm install --force -r --filter './packages/ui'",
+    "install:all": "pnpm install --force -r --filter './apps/**' && pnpm install --force -r --filter './packages/ui'",
+    "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && find . -name 'pnpm-lock.yaml' -type f -delete"
+  },
+  "devDependencies": {
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.5",
+    "typescript": "5.7.3"
+  },
+  "packageManager": "pnpm@10.4.1",
+  "engines": {
+    "node": ">=20"
+  }
+}

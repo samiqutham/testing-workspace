@@ -1,0 +1,94 @@
+/* Slim horizontal scrollbar for the tabs row */
+@layer utilities {
+  .tabs-scrollbar::-webkit-scrollbar-track {
+    background: #0f212e;
+    border-radius: 9999px;
+  }
+
+  .tabs-scrollbar::-webkit-scrollbar-thumb {
+    background: #2f4553;
+    border-radius: 9999px;
+  }
+
+  .tabs-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #4b6a7e;
+  }
+}
+
+@layer utilities {
+  .tabs-scrollbar {
+    -ms-overflow-style: none;
+    /* IE, Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .tabs-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+  }
+}
+
+.seeMore:before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #0f212e 0%, rgba(15, 33, 46, 0) 100%);
+  border-radius: 11px;
+}
+
+@media (min-width: 828px) {
+  .column-container {
+    column-count: 2;
+    column-gap: 1.5rem;
+    break-before: avoid;
+  }
+}
+
+/* @keyframes blink-bg {
+  0% {
+    background-color: #286984;
+  }
+  50% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #286984;
+  }
+}
+
+.blink-bg {
+  animation: blink-bg 0.4s ease;
+} */
+
+
+
+/* Keyframes for up-to-down arrow bounce */
+@keyframes arrowBounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-6px); /* move up */
+  }
+  50% {
+    transform: translateY(0); /* back to center */
+  }
+  75% {
+    transform: translateY(6px); /* move down */
+  }
+  100% {
+    transform: translateY(0); /* back to center */
+  }
+}
+
+
+.arrow-odds{
+  animation: arrowBounce 0.8s ease-in-out infinite;
+  position: absolute;
+  font-size: .75rem;
+}

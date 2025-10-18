@@ -1,0 +1,150 @@
+/* loader css */
+
+/* === Bouncing Dots Logo === */
+/* Tweak sizes/colors here */
+:root {
+  --logo-size: 40px; /* total width/height of the logo area */
+  --dot-size: 10px; /* diameter of each dot */
+  --dot-color: #ffffff; /* white balls */
+  --duration: 700ms; /* animation speed */
+}
+
+.bounce-logo {
+  position: relative;
+  width: var(--logo-size);
+
+  /* background stays transparent by default */
+}
+
+.bounce-logo .dot {
+  position: absolute;
+  top: 50%;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  margin-top: calc(var(--dot-size) / -2);
+  border-radius: 50%;
+  background: var(--dot-color);
+  /* optional soft glow so white is visible on light backgrounds too */
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
+
+/* left dot starts at far left and moves to center then back */
+.bounce-logo .left {
+  left: 0;
+  transform-origin: right center;
+  animation: leftMove var(--duration) infinite cubic-bezier(0.5, 0, 0.3, 1);
+}
+
+/* right dot starts at far right and moves to center then back */
+.bounce-logo .right {
+  right: 0;
+  transform-origin: left center;
+  animation: rightMove var(--duration) infinite cubic-bezier(0.5, 0, 0.3, 1);
+}
+
+/* distance each dot travels to the center = (logo-size - dot-size)/2 */
+@keyframes leftMove {
+  0% {
+    transform: translateX(0) scaleX(1) scaleY(1);
+  }
+  42% {
+    transform: translateX(calc((var(--logo-size) - var(--dot-size)) / 2))
+      scaleX(0.85) scaleY(1.1);
+  } /* squash on impact */
+  50% {
+    transform: translateX(calc((var(--logo-size) - var(--dot-size)) / 2))
+      scaleX(0.92) scaleY(1.04);
+  }
+  100% {
+    transform: translateX(0) scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes rightMove {
+  0% {
+    transform: translateX(0) scaleX(1) scaleY(1);
+  }
+  42% {
+    transform: translateX(calc(-1 * (var(--logo-size) - var(--dot-size)) / 2))
+      scaleX(0.85) scaleY(1.1);
+  }
+  50% {
+    transform: translateX(calc(-1 * (var(--logo-size) - var(--dot-size)) / 2))
+      scaleX(0.92) scaleY(1.04);
+  }
+  100% {
+    transform: translateX(0) scaleX(1) scaleY(1);
+  }
+}
+
+/* accessibility: respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .bounce-logo .left,
+  .bounce-logo .right {
+    animation: none;
+  }
+}
+
+/* loader css */
+#preloader_2 {
+  position: relative;
+  /* left: 0%; */
+  right: 11%;
+  top: 6px;
+  /* width: 30px; */
+  /* height: 30px; */
+}
+#preloader_2 span {
+  display: block;
+  bottom: 0px;
+  width: 15px;
+  height: 15px;
+  background: #f9f8fa;
+  position: absolute;
+}
+#preloader_2 span:nth-child(1) {
+  -webkit-animation: preloader_1_1 1.5s infinite ease-in-out;
+}
+#preloader_2 span:nth-child(2) {
+  left: 35px;
+  -webkit-animation: preloader_1_2 1.5s infinite ease-in-out;
+}
+
+@-webkit-keyframes preloader_1_1 {
+  0% {
+    -webkit-transform: translateX(0px) translateY(0px) rotate(0deg);
+    border-radius: 20px;
+  }
+  50% {
+    -webkit-transform: translateX(40px) rotate(-180deg);
+    border-radius: 20px;
+    background: #f3f5f6;
+  }
+  100% {
+    -webkit-transform: translateX(0px) translateY(0px) rotate(-360deg);
+    border-radius: 20px;
+  }
+}
+@-webkit-keyframes preloader_1_2 {
+  0% {
+    -webkit-transform: translateX(0px) translateY(0px) rotate(0deg);
+    border-radius: 20px;
+  }
+  50% {
+    -webkit-transform: translateX(-40px) rotate(180deg);
+    border-radius: 20px;
+    background: #f6f5f3;
+  }
+  100% {
+    -webkit-transform: translateX(0px) translateY(0px) rotate(360deg);
+    border-radius: 20px;
+  }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  opacity: none;
+}

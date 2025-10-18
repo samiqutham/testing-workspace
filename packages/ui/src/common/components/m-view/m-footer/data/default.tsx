@@ -1,0 +1,107 @@
+export const defaultFooterMenu = [
+  {
+    label: "Exchange",
+    links: [
+      { name: "Casino Games", routerLink: "/casino/games" },
+      { name: "Slots", routerLink: "/casino/slots" },
+      { name: "Live Casino", routerLink: "/casino/live" },
+      { name: "Roulette", routerLink: "/casino/roulette" },
+      { name: "Blackjack", routerLink: "/casino/blackjack" },
+      { name: "Poker", routerLink: "/casino/poker" },
+      { name: "Publishers", routerLink: "/casino/publishers" },
+      { name: "Promos & Competitions", routerLink: "/casino/promos" },
+      { name: "Stake Engine", routerLink: "/casino/engine" },
+    ],
+  },
+  {
+    label: "Casino",
+    links: [
+      { name: "Casino Games", routerLink: "/casino/games" },
+      { name: "Slots", routerLink: "/casino/slots" },
+      { name: "Live Casino", routerLink: "/casino/live" },
+      { name: "Roulette", routerLink: "/casino/roulette" },
+      { name: "Blackjack", routerLink: "/casino/blackjack" },
+      { name: "Poker", routerLink: "/casino/poker" },
+      { name: "Publishers", routerLink: "/casino/publishers" },
+      { name: "Promos & Competitions", routerLink: "/casino/promos" },
+      { name: "Stake Engine", routerLink: "/casino/engine" },
+    ],
+  },
+  {
+    label: "Fantasy",
+    links: [
+      { name: "Casino Games", routerLink: "/casino/games" },
+      { name: "Slots", routerLink: "/casino/slots" },
+      { name: "Live Casino", routerLink: "/casino/live" },
+      { name: "Roulette", routerLink: "/casino/roulette" },
+      { name: "Blackjack", routerLink: "/casino/blackjack" },
+      { name: "Poker", routerLink: "/casino/poker" },
+      { name: "Publishers", routerLink: "/casino/publishers" },
+      { name: "Promos & Competitions", routerLink: "/casino/promos" },
+      { name: "Stake Engine", routerLink: "/casino/engine" },
+    ],
+  },
+  {
+    label: "Sports",
+    links: [
+      { name: "Sportsbook", routerLink: "/sports" },
+      { name: "Live Sports", routerLink: "/sports/live" },
+      { name: "Soccer", routerLink: "/sports/soccer" },
+      { name: "Basketball", routerLink: "/sports/basketball" },
+      { name: "Tennis", routerLink: "/sports/tennis" },
+      { name: "eSports", routerLink: "/sports/esports" },
+      { name: "Bet Bonuses", routerLink: "/sports/bonuses" },
+      { name: "Sports Rules", routerLink: "/sports/rules" },
+      { name: "Racing Rules", routerLink: "/sports/racing-rules" },
+    ],
+  },
+  {
+    label: "Support",
+    links: [
+      { name: "Help Center", routerLink: "/support/help-center" },
+      { name: "Fairness", routerLink: "/support/fairness" },
+      { name: "Gambling Helpline", routerLink: "/support/helpline" },
+      { name: "Live Support", routerLink: "/support/live" },
+      { name: "Self Exclusion", routerLink: "/support/self-exclusion" },
+      {
+        name: "Law Enforcement Request",
+        routerLink: "/support/law-enforcement",
+      },
+    ],
+  },
+  {
+    label: "About Us",
+    links: [
+      { name: "VIP Club", routerLink: "/about/vip-club" },
+      { name: "Affiliate", routerLink: "/about/affiliate" },
+      { name: "Privacy Policy", routerLink: "/about/privacy-policy" },
+      { name: "AML Policy", routerLink: "/about/aml-policy" },
+      { name: "Terms of Service", routerLink: "/about/terms" },
+    ],
+  },
+  {
+    label: "Payment Info",
+    links: [
+      {
+        name: "Deposit & Withdrawals",
+        routerLink: "/payment/deposit-withdrawals",
+      },
+      { name: "Currency Guide", routerLink: "/payment/currency-guide" },
+      { name: "Crypto Guide", routerLink: "/payment/crypto-guide" },
+      { name: "Supported Crypto", routerLink: "/payment/supported-crypto" },
+      { name: "How to Use the Vault", routerLink: "/payment/vault-guide" },
+      { name: "How Much to Bet With", routerLink: "/payment/bet-guide" },
+    ],
+  },
+  {
+    label: "FAQ",
+    links: [
+      { name: "How-to Guides", routerLink: "/faq/how-to" },
+      { name: "Online Casino Guide", routerLink: "/faq/casino-guide" },
+      { name: "Sports Betting Guide", routerLink: "/faq/sports-betting" },
+      { name: "How to Live Stream Sports", routerLink: "/faq/live-stream" },
+      { name: "Stake VIP Guide", routerLink: "/faq/vip-guide" },
+      { name: "House Edge Guide", routerLink: "/faq/house-edge" },
+    ],
+  },
+];

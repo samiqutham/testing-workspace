@@ -1,0 +1,5 @@
+.fantasyGradient {
+  border: 2px solid transparent; /* width of border */
+  border-image: linear-gradient(#f60105 0%, #801011 100%) 1;
+  border-bottom: 0;
+}

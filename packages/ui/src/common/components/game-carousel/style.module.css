@@ -1,0 +1,11 @@
+@media (max-width: 1024px) and (min-width: 768px) {
+  .img {
+    height: 173.81px !important;
+  }
+}
+
+@media (max-width:767px) and (min-width:500px) {
+    .img{
+        min-height: 230px !important;
+    }
+}
