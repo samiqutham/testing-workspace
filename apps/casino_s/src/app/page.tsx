@@ -90,7 +90,7 @@ export default function Home() {
   useEffect(() => {
     const runPromise = async () => {
       // Fake async work (2 sec)
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 500));
 
       // Jab promise resolve ho jaye
       setReady(true);
@@ -99,9 +99,9 @@ export default function Home() {
     runPromise();
   }, []);
 
-  if (!ready) {
-    return <Loading />;
-  }
+  // if (!ready) {
+  //   return <Loading />;
+  // }
 
   return (
     <div>
